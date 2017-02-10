@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="NarrowItDownApp">
+<head>
+	<title>Menu Items Search</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+    <h1>Menu Items</h1>
+
+    <div ng-controller="NarrowDownController as ctrl">
+      <input type="text" ng-model="name1">
+      <button ng-click="ctrl.newItem(name1)">Narrow It Down For Me!</button>
+    
+     		<found-item found="ctrl.found" bad-remove="ctrl.removeItem"></found-item> 
+     		 	
+      {{ctrl.message}}
+   
+    </div>
+
+
+</body>
+</html>
